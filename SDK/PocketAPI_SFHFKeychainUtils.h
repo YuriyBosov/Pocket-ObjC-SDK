@@ -30,7 +30,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SFHFKeychainUtils : NSObject {
+@interface PocketAPI_SFHFKeychainUtils : NSObject {
   
 }
 

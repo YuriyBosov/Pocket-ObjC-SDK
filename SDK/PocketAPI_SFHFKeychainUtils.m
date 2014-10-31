@@ -27,7 +27,7 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "SFHFKeychainUtils.h"
+#import "PocketAPI_SFHFKeychainUtils.h"
 #import <Security/Security.h>
 
 static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
@@ -38,7 +38,7 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 @end
 #endif
 
-@implementation SFHFKeychainUtils
+@implementation PocketAPI_SFHFKeychainUtils
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < 30000 && TARGET_IPHONE_SIMULATOR
 
@@ -299,7 +299,7 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 	
 	// See if we already have a password entered for these credentials.
 	NSError *getError = nil;
-	NSString *existingPassword = [SFHFKeychainUtils getPasswordForUsername: username andServiceName: serviceName error:&getError];
+	NSString *existingPassword = [PocketAPI_SFHFKeychainUtils getPasswordForUsername: username andServiceName: serviceName error:&getError];
   
 	if ([getError code] == -1999) 
   {
